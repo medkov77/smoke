@@ -1,0 +1,272 @@
+@import 'base/fonts';
+@import 'base/globals';
+
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+@import 'libs/libs';
+@import '../components/components';
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+}
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.offer {
+  padding-top: 5.6rem;
+  &-text {
+    margin-top: 7rem;
+    max-width: 110rem;
+    font-size: 1.6rem;
+    line-height: 1.875;
+    margin-left: 3.2rem;
+
+    span {
+      color: #e33e54;
+    }
+  }
+}
+h1 {
+  font-size: 6rem;
+  line-height: 1.22;
+  margin: 0;
+}
+.navigation {
+  margin-top: 4.1rem;
+  margin-left: 3.2rem;
+  font-size: 1.2rem;
+  line-height: 4;
+  font-weight: 400;
+  width: 100%;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  span {
+    color: #4c858b;
+    margin-left: 0.8rem;
+  }
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.advantages {
+  display: flex;
+  &-title {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.58;
+  }
+  &-subtitle {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.27;
+    color: #e33e54;
+  }
+  &-list {
+    max-width: 51rem;
+    font-size: 1.6rem;
+    line-height: 2.125;
+
+    li + li {
+      margin-top: 2.2rem;
+    }
+    li {
+      color: #ea6628;
+      span {
+        color: #000;
+      }
+    }
+  }
+}
+
+.line {
+  width: 7.4rem;
+  height: 0.5rem;
+  background: #e33e54;
+  margin-bottom: 1.1rem;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  line-height: 1.22;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+.montage {
+  padding-top: 9.5rem;
+
+  ol {
+    list-style-type: none;
+    counter-reset: num;
+
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    height: 27rem;
+  }
+  ol li {
+    position: relative;
+    height: 7rem;
+    width: 50rem;
+    display: flex;
+    line-height: 1.875;
+    align-items: center;
+    padding-left: 4.2rem;
+  }
+  ol li:before {
+    content: counter(num);
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    left: -4.2rem;
+    color: #e33e54;
+    opacity: 0.2;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: 700;
+    font-family: 'Montserrat';
+  }
+}
+.why {
+  &-text {
+    font-size: 1.6rem;
+    max-width: 125rem;
+    line-height: 1.875;
+    margin-bottom: 5rem;
+  }
+  .options {
+    display: flex;
+  }
+  .opt-title {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-top: 3.2rem;
+    margin-bottom: 1rem;
+  }
+  .option {
+    width: 40rem;
+  }
+  .opt-list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    font-size: 1.6rem;
+    line-height: 1.875;
+    span {
+      font-weight: 600;
+      color: #e33e54;
+    }
+  }
+}
+.form {
+  padding-top: 10rem;
+  &-title {
+    font-size: 5rem;
+    line-height: 0.8;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  &-subtitle {
+    font-size: 2.2rem;
+    line-height: 1.81;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+  &-social {
+    margin-top: 3.1rem;
+    margin-bottom: 3.7rem;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 4rem;
+  }
+  form {
+    padding: 5.5rem;
+    background: #ffffff;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+  }
+  &-text {
+    font-size: 2rem;
+    font-weight: 500;
+    span {
+      color: #ea6628;
+    }
+  }
+  &-small-text {
+    margin-top: 1.2rem;
+    margin-bottom: 2.2rem;
+    font-size: 1.6rem;
+    line-height: 1.875;
+  }
+  &-inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+  input {
+    height: 5.6rem;
+    display: block;
+    font-size: 1.4rem;
+    color: #b1b1b1;
+    padding-left: 1.7rem;
+    width: 90%;
+    margin-right: 1.6rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+  }
+  .input-item {
+    flex-grow: 1;
+    margin-right: 1.6rem;
+  }
+  button {
+    display: block;
+    height: 5.6rem;
+    font-size: 1.6rem;
+    background: #215359;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    width: 90%;
+    cursor: pointer;
+  }
+}
+.video {
+  padding-top: 10rem;
+
+  &-text {
+    font-size: 1.6rem;
+    line-height: 1.875;
+    margin-bottom: 10rem;
+  }
+  &-play {
+    text-align: center;
+    width: 100%;
+
+    background-image: url('../images/video/videoback.jpg');
+    background-size: cover;
+    background-position: bottom;
+  }
+}
+.photo {
+  padding-top: 10rem;
+  padding-bottom: 13.6rem;
+  &-text {
+    font-size: 1.6rem;
+    line-height: 1.785;
+  }
+}
